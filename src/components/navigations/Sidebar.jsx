@@ -12,7 +12,7 @@ const Sidebar = ({ sideBarSize }) => {
   return (
     <div
       className={`hidden md:block z-50 sticky top-16 h-[calc(100vh-64px)] bg-background transition-all overflow-y-scroll no-scrollbar ${
-        sideBarSize === "large" ? " w-80 px-5" : "w-20"
+        sideBarSize === "large" ? " w-64 px-5" : "w-20"
       }`}
     >
       <ul className={`pt-5 pb-8 space-y-2 `}>
