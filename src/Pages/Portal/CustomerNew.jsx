@@ -6,6 +6,7 @@ import { CustomerSchema } from '@/schema/customerSchema';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import PageHeader from '@/components/PageHeader';
 
 const CustomerNew = () => {
 
@@ -31,9 +32,14 @@ const CustomerNew = () => {
     console.log(values);
   };
 
+  const pageHeading = {
+    header: 'Register New Customer',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, magnam?'
+  }
 
   return (
     <div className="bg-background rounded-lg p-5 md:p-10 h-full">
+      <PageHeader heading = {pageHeading}/>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-5 grid-cols-6">
           <div className='col-span-6'>

@@ -1,6 +1,7 @@
+import * as React from "react"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip"
-import { ArrowUpDown, ArrowUpAz, ArrowDownZa } from "lucide-react"
-
+import { ArrowUpDown, ArrowUpAz, ArrowDownZa, } from "lucide-react"
+import DrawerDialog from "@/components/ViewCustomers/DrawerDialog.jsx"
 
 export const columns = [
   {
@@ -89,7 +90,7 @@ export const columns = [
         </TooltipProvider>
       )
     },
-    size: 200
+    size: 180
   },
   {
     accessorKey: 'customerPhoneNumber',
@@ -109,7 +110,7 @@ export const columns = [
         </TooltipProvider>
       )
     },
-    size: 150
+    size: 175
   },
   {
     accessorKey: 'contactPerson',
@@ -197,7 +198,7 @@ export const columns = [
         </TooltipProvider>
       )
     },
-    size: 200
+    size: 180
   },
   {
     accessorKey: 'contactPersonPhoneNumber',
@@ -217,7 +218,16 @@ export const columns = [
         </TooltipProvider>
       )
     },
-    size: 150
-  }
-  
+    size: 175
+  },
+  {
+    id: "actions",
+    cell: ({ row }) => {
+      const rowData = row.original
+      return (
+        <DrawerDialog rowData = {rowData}/>
+      )
+    },
+    size: 60
+  },
 ]

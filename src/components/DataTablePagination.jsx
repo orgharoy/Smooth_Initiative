@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select"
 
 
-export function DataTablePagination({table,isSelectable}) {
+export function DataTablePagination({table, isSelectable}) {
     return (
         <div className={`flex items-center ${isSelectable ? 'justify-between' : 'justify-end'} px-2`}>
             {

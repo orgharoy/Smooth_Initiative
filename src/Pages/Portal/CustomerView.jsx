@@ -1,6 +1,7 @@
 import React from 'react'
 import { columns } from '@/components/ViewCustomers/Columns.jsx'
 import { DataTable } from '@/components/ViewCustomers/DataTable'
+import PageHeader from '@/components/PageHeader'
 
 const CustomerView = () => {
 
@@ -121,11 +122,35 @@ const CustomerView = () => {
       "contactPerson": "Chris Lee",
       "contactPersonEmail": "chrislee12@onemorecompany.com",
       "contactPersonPhoneNumber": "+880 1868-790123"
+    },
+    {
+      "id": "def12332",
+      "customerName": "More Company",
+      "customerEmail": "info12@onemorecompany.com",
+      "customerPhoneNumber": "+880 1757-689012",
+      "contactPerson": "Arif Kaku",
+      "contactPersonEmail": "chrislee12@onemorecompany.com",
+      "contactPersonPhoneNumber": "+880 1868-790123"
+    },
+    {
+      "id": "def12332",
+      "customerName": "Man Man",
+      "customerEmail": "info12@onemorecompany.com",
+      "customerPhoneNumber": "+880 1757-689012",
+      "contactPerson": "Avijit Man",
+      "contactPersonEmail": "chrislee12@onemorecompany.com",
+      "contactPersonPhoneNumber": "+880 1868-790123"
     }
   ]
 
+  const pageHeading = {
+    header: 'Customer List',
+    description: 'List of all the customers registered under your business'
+  }
+
   return (
     <div className="bg-background rounded-lg p-5 md:p-10 h-full max-w-full">
+      <PageHeader heading = {pageHeading}/>
       <DataTable columns={columns} data={data} />
     </div>
   )
