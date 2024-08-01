@@ -97,7 +97,7 @@ const Topbar = ({ setSideBarSize }) => {
         <Input
           type="search"
           placeholder="Search"
-          className="w-full border-0 h-8 font-semibold bg-primary-foreground"
+          className="w-full border-0 h-8 bg-muted"
         />
         <Button variant="ghost" size="icon">
           <SearchIcon className="h-4 w-4" />
@@ -146,3 +146,4 @@ const Topbar = ({ setSideBarSize }) => {
 };
 
 export default Topbar;
+

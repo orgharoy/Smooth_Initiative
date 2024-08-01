@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { MoreHorizontal } from 'lucide-react'
-import { Dialog, DialogContent, DialogTrigger, DialogTitle} from "@/components/ui/dialog"
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger,} from "@/components/ui/drawer"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Drawer, DrawerContent, DrawerTrigger} from "@/components/ui/drawer"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import CustomerDetails from './CustomerDetails'
 
 const DrawerDialog = ({rowData}) => {
@@ -16,9 +16,6 @@ const DrawerDialog = ({rowData}) => {
                         <MoreHorizontal />
                     </DialogTrigger>
                     <DialogContent>
-                        <DialogTitle className={cn('mb-5')}>
-                            Customer Details
-                        </DialogTitle>
                         <CustomerDetails rowData = {rowData}/>
                     </DialogContent>
                 </Dialog>
@@ -28,8 +25,10 @@ const DrawerDialog = ({rowData}) => {
                     <DrawerTrigger className={cn('cursor-pointer')}>
                         <MoreHorizontal />
                     </DrawerTrigger>
-                    <DrawerContent>
-                        <CustomerDetails rowData = {rowData}/>
+                    <DrawerContent className='fixed bottom-0 left-0 right-0 max-h-[90dvh]'>
+                        <ScrollArea className='overflow-auto'>
+                            <CustomerDetails rowData = {rowData}/>
+                        </ScrollArea>
                     </DrawerContent>
                 </Drawer>
             </div>
