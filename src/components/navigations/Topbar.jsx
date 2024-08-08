@@ -34,7 +34,7 @@ const Topbar = ({ setSideBarSize }) => {
   };
 
   return (
-    <nav className="h-16 flex justify-between items-center px-8 border-b sticky top-0 z-50 bg-background">
+    <nav className="h-16 flex justify-between items-center px-4 md:px-8 border-b sticky top-0 z-50 bg-background">
       <Sheet>
         <SheetTrigger asChild>
           <Menu className={`cursor-pointer block md:hidden`} />

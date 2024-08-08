@@ -11,7 +11,7 @@ import { navItems } from "../SidebarNavItems";
 const Sidebar = ({ sideBarSize }) => {
   return (
     <div
-      className={`hidden md:block z-50 sticky top-16 h-[calc(100vh-64px)] bg-background transition-all overflow-y-scroll no-scrollbar ${
+      className={`flex-shrink-0 hidden md:block z-50 sticky top-16 h-[calc(100vh-64px)] bg-background transition-all overflow-y-scroll no-scrollbar ${
         sideBarSize === "large" ? " w-64 px-5" : "w-20"
       }`}
     >

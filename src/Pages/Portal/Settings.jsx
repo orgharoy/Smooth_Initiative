@@ -2,7 +2,9 @@ import React from 'react'
 
 const Settings = () => {
   return (
-    <div>Settings</div>
+    <div className="bg-background rounded-lg p-5 md:p-10 h-full">
+
+    </div>
   )
 }
 

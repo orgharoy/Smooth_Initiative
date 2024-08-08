@@ -43,7 +43,7 @@ export function DataTable({ columns, data,}) {
   }
 
   return (
-    <div className="space-y-4 md:space-y-4">
+    <div className="space-y-4 md:space-y-4 max-w-full">
       <div className="flex items-center justify-between gap-4">
         <div className="flex w-full items-center gap-3">
           <Select onValueChange={(value) => handleFilterOptionChange(value)}>

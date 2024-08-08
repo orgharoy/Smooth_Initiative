@@ -11,7 +11,7 @@ const Layout = () => {
       <Topbar setSideBarSize = {setSideBarSize}/>
       <div className="flex relative">
         <Sidebar sideBarSize={sideBarSize} />
-        <main className={`p-3 md:p-5 w-full bg-muted ${sideBarSize === "large" ? 'md:max-w-[calc(100vw-256px)]': 'md:max-w-calc(100vw-80px)'}`}>
+        <main className={`p-3 md:p-5 w-full bg-muted overflow-hidden flex-grow-0 ${sideBarSize === "large" ? 'md:max-w-[calc(100vw-256px)]': 'md:max-w-calc(100vw-80px)'}`}>
           <Outlet />
         </main>
       </div>
